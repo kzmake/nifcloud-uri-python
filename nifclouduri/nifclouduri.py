@@ -25,6 +25,10 @@ class NifCloud:
 
         return requests.get(self.endpoint, params=query)
 
+    def to_s(self, action, query={}):
+        self.set_query(action, query)
+        return f"{self.endpoint}?{urllib.parse.urlencode(query)}"
+
     def set_query(self, action, query={}):
         timestamp = dt.now().strftime('%Y-%m-%dT%XZ')
         query.update({
