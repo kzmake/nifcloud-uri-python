@@ -4,6 +4,9 @@
 import hashlib
 import hmac
 import base64
+import requests
+import urllib.parse
+from datetime import datetime as dt
 
 class Signature:
     @staticmethod
