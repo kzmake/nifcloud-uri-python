@@ -10,5 +10,7 @@ setup(
     license='MIT',
     keywords='nifcloud api uri nifty cloud',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    install_requires=[],
+    install_requires=[
+        'requests',
+    ],
 )
